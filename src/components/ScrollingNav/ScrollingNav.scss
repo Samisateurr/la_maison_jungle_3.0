@@ -1,0 +1,66 @@
+/* ScrollingNav.scss */
+
+.scrolling-nav {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    perspective: 1200px; /* Perspective pour l'effet 3D */
+}
+
+.arrow {
+    background: none;
+    border: none;
+    font-size: 3rem;
+    cursor: pointer;
+    padding: 0 20px; /* Espacement autour des flèches */
+    color: #2c392e; /* Couleur des flèches */
+    font-weight: 400;
+    transition: transform 0.3s; /* Transition uniquement pour le zoom */
+}
+
+.arrow:hover {
+    transform: scale(1.2); /* Zoom léger pour les flèches au survol */
+}
+
+.pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: inherit; /* Utilise la perspective du parent */
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #2c392e; /* Couleur des titres */
+    font-size: 1.5rem; /* Taille des titres par défaut */
+    margin: 0 40px; /* Espacement entre les titres */
+    transition: font-size 0.3s, transform 0.3s; /* Transitions pour l'animation */
+    position: relative; /* Position relative pour les effets */
+    transform: scale(0.9); /* Réduit légèrement les éléments non centraux */
+    opacity: 0.7; /* Opacité réduite pour les éléments non centraux */
+}
+
+.nav-item.center {
+    font-size: 3rem; /* Taille du titre au centre */
+    transform: scale(1); /* Taille normale pour l'élément central */
+    opacity: 1; /* Opacité complète pour l'élément central */
+}
+
+.nav-item.active {
+   text-decoration: underline; 
+   text-decoration-thickness: 3px; /* Ajustez l'épaisseur du soulignement */
+    text-underline-offset: 10px; /* Décale le soulignement vers le bas */
+}
+
+.nav-item:hover {
+    transform: scale(1.1); /* Zoom léger pour l'élément au survol */
+    opacity: 1; /* Opacité complète pour l'élément survolé */
+}

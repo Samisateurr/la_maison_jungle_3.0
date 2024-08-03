@@ -1,0 +1,21 @@
+/* App.scss (ou un autre fichier de style global) */
+
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center; /* Centre les éléments horizontalement et verticalement */
+  min-width: 320px;
+  min-height: 100vh; /* Assure que le corps prend au moins la hauteur de la vue */
+  background-color: bisque; /* Exemple de couleur de fond */
+  font-family: Arial, sans-serif;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px; /* Ajustez en fonction de votre design */
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center; /* Centre les éléments horizontalement */
+}
