@@ -1,0 +1,34 @@
+.banner {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px; /* Pour arrondir les coins */
+    overflow: hidden; /* Assure que le contenu ne dépasse pas les coins arrondis */
+    position: relative; /* Nécessaire pour l'overlay */
+  
+    /* Ajout de l'overlay sombre */
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5); /* Ajustez l'opacité selon vos besoins */
+      z-index: 1;
+    }
+  }
+  
+  .banner-text {
+    color: white;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 30px;
+    z-index: 2; /* Assure que le texte est au-dessus de l'overlay */
+    position: relative; /* Nécessaire pour z-index */
+  }
+  
